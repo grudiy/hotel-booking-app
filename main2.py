@@ -56,6 +56,11 @@ class Reservation:
         name = name.title()
         return name
 
+    @staticmethod
+    def convert(amount):
+        return amount * 1.2
+
+
 
 hotel1 = Hotel(hotel_id="134")
 hotel2 = Hotel(hotel_id="655")
@@ -74,3 +79,5 @@ print(hotel1.get_hotel_count(data=df))
 reservation = Reservation(guest_name="john smith  ", hotel_object=hotel1)
 print(reservation.the_guest_property)
 print(reservation.generate())
+
+print(reservation.convert(100))
