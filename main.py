@@ -77,7 +77,7 @@ if hotel.available():
     print("You entered credit card.")
     if credit_card.validate():
         print("Your credit card is validated, one time password is sent.")
-        if credit_card.authenticate(given_pass="mypassee"):
+        if credit_card.authenticate(given_pass="mypass"):
             print("Your credit card is authenticated.")
             hotel.book()
             name = input("Enter your name: ")
